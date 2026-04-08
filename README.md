@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # SWITCH-IT
+=======
+
+>>>>>>> 127fee8d1c1ff4f79c7e6f27ca5dbea344ef28fa
 Creating a Landing site for SwitchIT Pvt. Ltd.
 =======
 # Switch It - Smart Logistics Solutions
