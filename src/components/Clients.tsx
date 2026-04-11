@@ -9,7 +9,21 @@ const clients = [
   { name: "Hindustan Unilever", logo: "/logos/hul.png" },
   { name: "Marico", logo: "/logos/marico.png" },
   { name: "Britannia", logo: "/logos/birtannia.png" },
-  { name: "parle", logo: "/logos/parle.png" },
+  { name: "p&g", logo: "/logos/p&g.png" },
+  { name: "ITC", logo: "/logos/itc.png" },
+  { name: "Tata", logo: "/logos/tata.png" },
+  { name: "nestle", logo: "/logos/nestle.png" },
+  { name: "bieredorf", logo: "/logos/bieredorf.png" },
+  { name: "cavin", logo: "/logos/cavin.png" },
+  { name: "pepsico", logo: "/logos/pepsico.png" },
+  { name: "Pidilite", logo: "/logos/Pidilite.png" },
+  { name: "cococola", logo: "/logos/cococola.png" },
+  { name: "lotte", logo: "/logos/Lotte.png" },
+  { name: "johnson", logo: "/logos/johnson.png" },
+  { name: "supreme", logo: "/logos/supreme.png" },
+  { name: "anchor", logo: "/logos/Anchor.png" },
+  { name: "colgate", logo: "/logos/colgate.png" },
+  
 ];
 
 export default function Clients() {
@@ -23,7 +37,7 @@ export default function Clients() {
           <div className="h-1 w-12 bg-primary mx-auto rounded-full" />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-12 items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-12 items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
           {clients.map((client, index) => (
             <motion.div
               key={client.name}

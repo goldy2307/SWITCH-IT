@@ -9,7 +9,7 @@ export default function Services() {
   const services = [
     {
       title: t('services.manufacturer'),
-      image: "/services/manufacturer.jfif",
+      image: "/services/manufacturer.png",
       description: t('services.manufacturerDesc')
     },
     {
@@ -19,12 +19,12 @@ export default function Services() {
     },
     {
       title: t('services.distributors'),
-      image: "/services/Distributor.jfif",
+      image: "/services/Distributor.png",
       description: t('services.distributorsDesc')
     },
     {
       title: t('services.carrier'),
-      image: "/services/carrier.jfif",
+      image: "/services/carrier.png",
       description: t('services.carrierDesc')
     },
     {

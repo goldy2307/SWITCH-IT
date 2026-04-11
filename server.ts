@@ -24,6 +24,13 @@ async function startServer() {
     res.json({ success: true, message: "Message received successfully!" });
   });
 
+  app.post("/api/reviews", (req, res) => {
+    const { name, role, content, rating } = req.body;
+    console.log(`Received review submission:`, { name, role, content, rating });
+    // In a real MERN app, you would save this to MongoDB here
+    res.json({ success: true, message: "Review submitted successfully!" });
+  });
+
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({

@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { 
   NavigationMenu, 
@@ -16,12 +17,14 @@ import { useTranslation } from "react-i18next";
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
   const { t, i18n } = useTranslation();
-
+  const location = useLocation();
   const navItems = [
-    { name: t('nav.home'), href: "#home" },
+    { name: t('nav.home'), href: "/" },
     { name: t('nav.about'), href: "#about" },
     { name: t('nav.services'), href: "#services" },
-    { name: t('nav.contact'), href: "#contact" },
+ { name: "Products", href: "/products" },
+    { name: "Reviews", href: "/reviews" },
+    { name: t('nav.contact'), href: "/contact" },
   ];
 
   const toggleLanguage = () => {
@@ -30,18 +33,17 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+   <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        <div className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <motion.div>
-          <img src="logos/logo-main.png" alt="Logo" className="h-15 w-15 object-contain" />
+           <img src="logos/logo-main.png" alt="Logo" className="h-15 w-15 object-contain" />
           </motion.div>
           <div className="flex flex-col">
-              
             <span className="text-xl font-bold tracking-tight text-primary">SWITCH IT</span>
             <span className="text-[10px] font-medium tracking-[0.2em] text-muted-foreground uppercase">Change with Consistency</span>
           </div>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-4">
@@ -79,11 +81,11 @@ export default function Navbar() {
               <Languages className="h-5 w-5" />
               <span className="text-xs font-bold uppercase">{i18n.language.split('-')[0]}</span>
             </Button>
-
+            <a href="/brochure.pdf" download>
             <Button variant="outline" className="gap-2 border-primary/20 hover:bg-primary/5 ml-2">
               <Download className="h-4 w-4" />
               {t('nav.brochure')}
-            </Button>
+            </Button> </a>
           </div>
         </div>
 
